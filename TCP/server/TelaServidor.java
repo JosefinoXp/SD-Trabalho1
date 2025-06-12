@@ -8,8 +8,6 @@ public class TelaServidor {
     private final JTextArea logArea;
     private final DefaultListModel<String> modeloUsuarios;
     private final JList<String> listaUsuarios;
-    private final JButton btnIniciar;
-    private final JButton btnParar;
     
     public TelaServidor() {
         this.frame = new JFrame("Servidor de Chat");
@@ -29,19 +27,9 @@ public class TelaServidor {
         scrollUsuarios.setPreferredSize(new Dimension(200, 300));
         scrollUsuarios.setBorder(BorderFactory.createTitledBorder("Usuários Conectados"));
         
-        // Botões de controle
-        this.btnIniciar = new JButton("Iniciar Servidor");
-        this.btnParar = new JButton("Parar Servidor");
-        this.btnParar.setEnabled(false);
-        
-        JPanel painelBotoes = new JPanel();
-        painelBotoes.add(this.btnIniciar);
-        painelBotoes.add(this.btnParar);
-        
         // Layout
         this.frame.add(scrollLog, BorderLayout.CENTER);
         this.frame.add(scrollUsuarios, BorderLayout.EAST);
-        this.frame.add(painelBotoes, BorderLayout.SOUTH);
         
         this.frame.pack();
         this.frame.setVisible(true);
