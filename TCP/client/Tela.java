@@ -12,7 +12,6 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class Tela {
-
 	private final JFrame frame;
 	private final JPanel panel;
 	private final JScrollPane scrollPane;

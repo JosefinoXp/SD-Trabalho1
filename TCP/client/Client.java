@@ -4,6 +4,8 @@ import java.io.PrintStream;
 import java.net.Socket;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Client {
 	public static void main(String[] args) throws Exception {
 		Socket socket =
@@ -12,6 +14,9 @@ public class Client {
 		PrintStream saida = new PrintStream(socket.getOutputStream());
 
 		Scanner entrada = new Scanner(socket.getInputStream());
+
+		String nomeUsuario = JOptionPane.showInputDialog("Digite seu nome:");
+		saida.println(nomeUsuario);
 
 		EmissorMensagem emissor = new EmissorMensagem(saida);
 

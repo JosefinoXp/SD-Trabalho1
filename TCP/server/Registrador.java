@@ -24,11 +24,13 @@ public class Registrador implements Runnable {
 				Scanner entrada = new Scanner(socket.getInputStream());
 				PrintStream saida = new PrintStream(socket.getOutputStream());
 
-				Receptor receptor = new Receptor(entrada, this.distribuidor);
+				String clienteId = entrada.nextLine();
+
+				Receptor receptor = new Receptor(entrada, this.distribuidor, clienteId);
 				Thread pilha = new Thread(receptor);
 				pilha.start();
 
-				Emissor emissor = new Emissor(saida);
+				Emissor emissor = new Emissor(saida, clienteId);
 
 				this.distribuidor.adicionaEmissor(emissor);
 
