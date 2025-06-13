@@ -2,6 +2,8 @@ package client;
 
 import java.io.PrintStream;
 
+// Envia mensagens do cliente para o servidor.
+// Usa PrintStream no OutputStream do Socket (TCP).
 public class EmissorMensagem {
 	private PrintStream saida;
 

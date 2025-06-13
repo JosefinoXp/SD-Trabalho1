@@ -2,6 +2,8 @@ package server;
 
 import java.util.Scanner;
 
+// Thread que processa mensagens recebidas de um cliente.
+// Lê mensagens do InputStream do Socket (TCP).
 public class Receptor implements Runnable {
     private Scanner entrada;
     private Distribuidor distribuidor;

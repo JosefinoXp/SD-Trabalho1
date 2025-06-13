@@ -3,6 +3,8 @@ package server;
 import java.util.ArrayList;
 import java.util.Collection;
 
+// Gerencia todos os clientes conectados e distribui mensagens (públicas/privadas).
+// Armazena Emissores (TCP) para cada cliente e envia mensagens via TCP.
 public class Distribuidor {
     public Collection<Emissor> emissores = new ArrayList<>();
     private TelaServidor telaServidor;

@@ -3,6 +3,7 @@ package server;
 import javax.swing.*;
 import java.awt.*;
 
+// Interface gráfica do servidor (logs e lista de usuários).
 public class TelaServidor {
     private final JFrame frame;
     private final JTextArea logArea;

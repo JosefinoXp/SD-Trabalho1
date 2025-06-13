@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
+// Ponto de entrada do cliente; conecta ao servidor via IP/porta.
+// Cria um Socket (TCP) para se conectar ao servidor.
 public class Client {
 	public static void main(String[] args) throws Exception {
 		Socket socket =

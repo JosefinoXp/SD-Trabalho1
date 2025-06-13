@@ -3,6 +3,8 @@ package server;
 import java.io.IOException;
 import java.net.ServerSocket;
 
+// Ponto de entrada do servidor; inicia o ServerSocket na porta 8081.
+// Cria um ServerSocket (TCP) para aceitar conexões de clientes.
 public class Server {
     public static void main(String[] args) throws IOException {
         TelaServidor telaServidor = new TelaServidor();

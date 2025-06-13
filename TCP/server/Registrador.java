@@ -6,6 +6,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
+// Thread que gerencia novas conexões de clientes via Socket.
 public class Registrador implements Runnable {
 
 	private Distribuidor distribuidor;

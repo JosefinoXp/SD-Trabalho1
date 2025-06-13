@@ -12,6 +12,7 @@ import javax.swing.JTextField;
 import java.awt.BorderLayout;
 import java.awt.Color;
 
+// 	Interface gráfica do cliente (chat e comandos).
 public class Tela {
     private final JFrame frame;
     private final JPanel panel;
